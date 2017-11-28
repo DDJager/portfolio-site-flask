@@ -1,0 +1,10 @@
+click==6.7
+dominate==2.3.1
+Flask==0.12.2
+Flask-Bootstrap==3.3.7.1
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+-e git+https://github.com/DDJager/portfolio-site-flask.git@e5cc627a24eb3b212e48a8553a4c07c0cf1c888c#egg=portfolio_danny_jager
+visitor==0.1.3
+Werkzeug==0.12.2
