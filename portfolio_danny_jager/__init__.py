@@ -1,7 +1,22 @@
 from flask import Flask
+import config
 
-app = Flask(__name__)
+def create_app(config_name = 'production'):
+    """
+    Factory pattern: Instantiate a Flask object from this method.
 
-@app.route('/')
-def index():
-    return 'Hello World!'
+    :return: Flask instance
+    """
+
+    # Create new instance of a flask object
+    app = Flask(__name__)
+
+    # Set the Configuration object from config.py
+    app.config.from_object(config.app_config[config_name])
+
+    @app.route('/')
+    def index():
+        return app.config['DATABASE_URI']
+
+    # Return the flask object
+    return app
