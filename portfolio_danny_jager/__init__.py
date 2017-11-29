@@ -1,5 +1,10 @@
+# Import main files
 from flask import Flask
 import config
+
+# Import Blueprints
+from portfolio_danny_jager.models import models
+from portfolio_danny_jager.views import portfolio, static_pages
 
 def create_app(config_name = 'production'):
     """
@@ -14,9 +19,10 @@ def create_app(config_name = 'production'):
     # Set the Configuration object from config.py
     app.config.from_object(config.app_config[config_name])
 
-    @app.route('/')
-    def index():
-        return app.config['DATABASE_URI']
+    # Register the blueprints
+    app.register_blueprint(models)
+    app.register_blueprint(portfolio.portfolio)
+    app.register_blueprint(static_pages.static_pages)
 
     # Return the flask object
     return app
