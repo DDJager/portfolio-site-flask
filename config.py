@@ -2,10 +2,11 @@
 
 class Config(object):
     SITE_NAME = 'Danny Portfolio'
-    HELLO = 'world!'
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    TEMPLATES_AUTO_RELOAD = True
+    SECRET_KEY = '<secret_key_here>'
     DATABASE_URI = 'mysql://user@localhost/development'
 
 class ProductionConfig(Config):

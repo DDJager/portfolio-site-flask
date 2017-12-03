@@ -1,4 +1,12 @@
+# Ignore the virtual env folder
 env/*
+
+# Ignore the egg-info files generated from a package (pip install -e .)
 *.egg-info
+
+# Ignore the pycache files
 */__pycache__/*
 __pycache__/
+
+# Ignore the compiled Python __init__ file
+*/__init__.pyc

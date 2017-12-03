@@ -1,5 +1,6 @@
 # Import main files
 from flask import Flask
+from flask_bootstrap import Bootstrap
 import config
 
 # Import Blueprints
@@ -15,6 +16,11 @@ def create_app(config_name = 'production'):
 
     # Create new instance of a flask object
     app = Flask(__name__)
+    Bootstrap(app)
+
+    # If in development mode, auto reload the jinja templates
+    if config_name == 'development':
+        app.jinja_env.auto_reload = True
 
     # Set the Configuration object from config.py
     app.config.from_object(config.app_config[config_name])
