@@ -5,4 +5,4 @@ portfolio = Blueprint('portfolio', __name__, template_folder='templates')
 @portfolio.route('/portfolio')
 def index():
     """ Return all portfolio items """
-    return 'Welcome to my portfolio page'
+    return render_template('portfolio.html')

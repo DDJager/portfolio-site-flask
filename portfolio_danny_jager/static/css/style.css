@@ -1,0 +1,22 @@
+body {
+    background-color: green;
+}
+
+
+.navigation {
+    background-color: #000;
+    padding: 40px 0px;
+}
+
+.navigation .logo > h2 {
+    margin: 0;
+}
+
+.navigation-content > ul {
+    margin: 0;
+}
+
+.navigation-content > ul > li {
+    list-style-type: none;
+    display: inline-block;
+}

@@ -1,13 +1,52 @@
+<!-- Extend bootstrap -->
 {% extends "bootstrap/base.html" %}
 
-{% block title %}This is an example page{% endblock %}
+<!-- Site title -->
+{% block title %} {{ site_title }} {% endblock %}
 
-{% block navbar %}
-<div class="navbar navbar-fixed-top">
-  <!-- ... -->
-</div>
+<!-- Stylesheets -->
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock %}
 
+<!-- Nav Menu -->
+{% block navbar %}
+    <div class="navigation">
+        <div class="container">
+
+            <!-- Logo -->
+            <div class="col-md-4 logo">
+                <h2>DANNY JAGER</h2>
+            </div>
+
+            <!-- Icons -->
+            <div class="col-md-4 icons">
+                <span>icon1</span>
+                <span>icon2</span>
+                <span>icon3</span>
+            </div>
+
+            <!-- Navigation Content -->
+            <div class="col-md-4 navigation-content">
+                <ul>
+                    <li><a href="{{ url_for('static_pages.home') }}">HOMEPAGE</a></li>
+                    <li><a href="{{ url_for('portfolio.index') }}">PORTFOLIO</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+<!-- Content -->
 {% block content %}
-  <h1>Hello, Bootddstrapfppp</h1>
+
+    <!-- <div class="container">
+        <div class="col-md-12">
+            <h1>dssdffdsdsffds</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div> -->
+
 {% endblock %}
