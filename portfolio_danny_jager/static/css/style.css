@@ -1,10 +1,16 @@
 body {
-    background-color: green;
+    height: 1920px;
+    background: #2a2d37, url('../img/test.jpg'); /* For browsers that do not support gradients */
+    background: url('../img/g-eazy.png') no-repeat center 200px, -webkit-linear-gradient(#2a2d37, #404857) no-repeat; /* For Safari 5.1 to 6.0 */
+    background: url('../img/g-eazy.png') no-repeat center 200px, -o-linear-gradient(#2a2d37, #404857) no-repeat; /* For Opera 11.1 to 12.0 */
+    background: url('../img/g-eazy.png') no-repeat center 200px, -moz-linear-gradient(#2a2d37, #404857) no-repeat; /* For Firefox 3.6 to 15 */
+    background: url('../img/g-eazy.png') no-repeat center 200px, linear-gradient(#2a2d37, #404857) no-repeat; /* Standard syntax */
+
 }
 
 
 .navigation {
-    background-color: #000;
+    background: url('../img/nav-bg.png');
     padding: 40px 0px;
 }
 
@@ -19,4 +25,25 @@ body {
 .navigation-content > ul > li {
     list-style-type: none;
     display: inline-block;
+}
+
+.navigation-content > ul > li > a {
+    color: #fff;
+}
+
+.navigation-content > ul > li > a:hover {
+    text-decoration: none;
+}
+
+.navigation-content > ul > li > a.active {
+    color: #427af8;
+}
+
+.navigation-border {
+    height: 5px;
+    background: #427af8; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #427af8 , #3470f9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #427af8, #3470f9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #427af8, #3470f9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #427af8 , #3470f9); /* Standard syntax */
 }

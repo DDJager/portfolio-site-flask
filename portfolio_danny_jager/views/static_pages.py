@@ -5,7 +5,7 @@ static_pages = Blueprint('static_pages', __name__, template_folder='templates')
 @static_pages.route('/')
 def home():
     """ The homepage of the website """
-    return render_template('base.html', site_title=app.config['SITE_TITLE'])
+    return render_template('home.html', site_title=app.config['SITE_TITLE'])
 
 # @static_pages.route('/about')
 # def about():

@@ -27,7 +27,7 @@ def create_app(config_name = 'production'):
 
     # Register the blueprints
     app.register_blueprint(models)
-    app.register_blueprint(portfolio.portfolio)
+    app.register_blueprint(portfolio.portfolio, url_prefix='/portfolio')
     app.register_blueprint(static_pages.static_pages)
 
     # Return the flask object

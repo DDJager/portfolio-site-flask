@@ -30,23 +30,27 @@
             <!-- Navigation Content -->
             <div class="col-md-4 navigation-content">
                 <ul>
-                    <li><a href="{{ url_for('static_pages.home') }}">HOMEPAGE</a></li>
-                    <li><a href="{{ url_for('portfolio.index') }}">PORTFOLIO</a></li>
+                    <li><a class="{% block active_home %}{% endblock %}" href="{{ url_for('static_pages.home') }}">HOMEPAGE</a></li>
+                    <li><a class="{% block active_portfolio %}{% endblock %}" href="{{ url_for('portfolio.index') }}">PORTFOLIO</a></li>
                 </ul>
             </div>
 
         </div>
+    </div>
+
+    <div class="navigation-border">
+
     </div>
 {% endblock %}
 
 <!-- Content -->
 {% block content %}
 
-    <!-- <div class="container">
+    <div class="container">
         <div class="col-md-12">
             <h1>dssdffdsdsffds</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-    </div> -->
+    </div>
 
 {% endblock %}
