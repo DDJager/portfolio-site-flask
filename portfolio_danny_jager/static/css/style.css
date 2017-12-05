@@ -1,3 +1,4 @@
+/** Body & HTML section **/
 body {
     height: 1920px;
     background: #2a2d37, url('../img/test.jpg'); /* For browsers that do not support gradients */
@@ -8,7 +9,14 @@ body {
 
 }
 
+::selection {
+  background: #2a2d37; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #2a2d37; /* Gecko Browsers */
+}
 
+/** Navigation section **/
 .navigation {
     background: url('../img/nav-bg.png');
     padding: 40px 0px;
@@ -28,6 +36,7 @@ body {
 }
 
 .navigation-content > ul > li > a {
+    font-family: 'Muli', sans-serif;
     color: #fff;
 }
 
@@ -46,4 +55,65 @@ body {
     background: -o-linear-gradient(right, #427af8, #3470f9); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, #427af8, #3470f9); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, #427af8 , #3470f9); /* Standard syntax */
+}
+
+.logo h2 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/** Introduction section **/
+.introduction {
+    padding: 150px 0px;
+}
+
+.introduction h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    color: #fff;
+}
+
+.introduction h3 {
+    font-family: 'Muli', sans-serif;
+    color: #427af8;
+}
+
+.introduction-header {
+    text-align: center;
+}
+
+.introduction-between {
+    margin: 50px 0px;
+}
+
+/** About section **/
+.about {
+    background-color: #313641;
+    padding: 50px 0px;
+}
+
+.about h3 {
+    font-family: 'Muli', sans-serif;
+    color: #427af8;
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    line-height: 1.6;
+}
+
+/** Admin Panel **/
+.admin-panel {
+    padding: 50px 25px;
+    margin-top: 150px;
+    background: url('../img/nav-bg.png');
+}
+
+.admin-panel h3 {
+    font-family: 'Muli', sans-serif;
+    color: #427af8;
+    margin-bottom: 25px;
 }

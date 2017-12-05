@@ -8,6 +8,10 @@
 {% block styles %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Muli|Raleway" rel="stylesheet">
+    <!-- font-family: 'Montserrat', sans-serif; -->
+    <!-- font-family: 'Muli', sans-serif; -->
+    <!-- font-family: 'Raleway', sans-serif; -->
 {% endblock %}
 
 <!-- Nav Menu -->
@@ -15,24 +19,28 @@
     <div class="navigation">
         <div class="container">
 
-            <!-- Logo -->
-            <div class="col-md-4 logo">
-                <h2>DANNY JAGER</h2>
-            </div>
+            <div class="row">
 
-            <!-- Icons -->
-            <div class="col-md-4 icons">
-                <span>icon1</span>
-                <span>icon2</span>
-                <span>icon3</span>
-            </div>
+                <!-- Logo -->
+                <div class="col-md-4 logo">
+                    <h2>DANNY JAGER</h2>
+                </div>
 
-            <!-- Navigation Content -->
-            <div class="col-md-4 navigation-content">
-                <ul>
-                    <li><a class="{% block active_home %}{% endblock %}" href="{{ url_for('static_pages.home') }}">HOMEPAGE</a></li>
-                    <li><a class="{% block active_portfolio %}{% endblock %}" href="{{ url_for('portfolio.index') }}">PORTFOLIO</a></li>
-                </ul>
+                <!-- Icons -->
+                <div class="col-md-4 icons">
+                    <span>icon1</span>
+                    <span>icon2</span>
+                    <span>icon3</span>
+                </div>
+
+                <!-- Navigation Content -->
+                <div class="col-md-4 navigation-content">
+                    <ul>
+                        <li><a class="{% block active_home %}{% endblock %}" href="{{ url_for('static_pages.home') }}">HOMEPAGE</a></li>
+                        <li><a class="{% block active_portfolio %}{% endblock %}" href="{{ url_for('portfolio.index') }}">PORTFOLIO</a></li>
+                    </ul>
+                </div>
+
             </div>
 
         </div>
@@ -41,16 +49,4 @@
     <div class="navigation-border">
 
     </div>
-{% endblock %}
-
-<!-- Content -->
-{% block content %}
-
-    <div class="container">
-        <div class="col-md-12">
-            <h1>dssdffdsdsffds</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-    </div>
-
 {% endblock %}
